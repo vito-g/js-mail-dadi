@@ -1,6 +1,10 @@
 var email = prompt ('Inserisci la tua email');
 console.log('La sua email è: ' + email);
-var data = document.getElementById('advert');
+
+var accessElement = document.getElementById('advert');
+var min = 1;
+var max = 6;
+var outputElement = document.getElementById('output');
 
 var lista = ['pippo@gmail.com', 'pluto@yahoo.it', 'paperino@tiscali.it', 'minni@gmail.com', 'paperone@gmail.com', 'qui@gmail.com', 'quo@gmail.com', 'qua@gmail.com'];
 var emailTrovata = false;
@@ -12,37 +16,28 @@ for(var i = 0; i < lista.length; i++) {
 
 if (emailTrovata === true) {
   alert('Granted Access! Enjoy our Game!');
-  var accessElement = document.getElementById('advert');
   accessElement.className = 'granted';
-  data.innerHTML = 'Granted Access! Enjoy our Game!';
-  var min = 1;
-  var max = 6;
+  accessElement.innerHTML = 'Granted Access! Enjoy our Game!';
   var dadoTu = Math.floor(Math.random() * (max + 1 - min) + min);
   var dadoUser = document.getElementById('dado-user');
   dadoUser.innerHTML = 'Your score: ' + dadoTu;
-  var min = 1;
-  var max = 6;
   var dadoLui = Math.floor(Math.random() * (max + 1 - min) + min);
   var dadoPc = document.getElementById('dado-pc');
   dadoPc.innerHTML = 'Pc score: ' + dadoLui;
 
   if (dadoTu > dadoLui) {
-    var outputElement = document.getElementById('output');
     outputElement.className = 'you-won';
-    output.innerHTML = ('You Won!');
+    outputElement.innerHTML = ('You Won!');
   } else if (dadoTu < dadoLui){
-    var outputElement = document.getElementById('output');
     outputElement.className = 'you-lost';
-    output.innerHTML = ('You Lost!');
+    outputElement.innerHTML = ('You Lost!');
   } else if (dadoTu === dadoLui){
-    var outputElement = document.getElementById('output');
     outputElement.className = 'draw';
-    output.innerHTML = ('The game is a draw. Try Again!');
+    outputElement.innerHTML = ('The game is a draw. Try Again!');
   }
 }
 else {
   alert('Denied Access! No Access No Game!');
-  var accessElement = document.getElementById('advert');
   accessElement.className = 'denied';
-  data.innerHTML = 'Denied Access! No Access No Game!';
+  accessElement.innerHTML = 'Denied Access! No Access No Game!';
 }
