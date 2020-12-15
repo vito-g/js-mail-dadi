@@ -1,0 +1,15 @@
+.denied, .granted, .draw {
+  color: white;
+}
+
+.denied {
+  background-color: red;
+}
+
+.granted {
+  background-color: green;
+}
+
+.draw {
+  background-color: black;
+}
