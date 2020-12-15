@@ -28,10 +28,12 @@ if (emailTrovata === true) {
   if (dadoTu > dadoLui) {
     outputElement.className = 'you-won';
     outputElement.innerHTML = ('You Won!');
-  } else if (dadoTu < dadoLui){
+  }
+  else if (dadoTu < dadoLui) {
     outputElement.className = 'you-lost';
     outputElement.innerHTML = ('You Lost!');
-  } else if (dadoTu === dadoLui){
+  }
+  else if (dadoTu === dadoLui) {
     outputElement.className = 'draw';
     outputElement.innerHTML = ('The game is a draw. Try Again!');
   }
