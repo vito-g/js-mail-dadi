@@ -8,13 +8,18 @@ var secondData = document.getElementById('data-due');
 var lista = ['pippo@gmail.com', 'pluto@yahoo.it', 'paperino@tiscali.it', 'minni@gmail.com', 'paperone@gmail.com', 'qui@gmail.com', 'quo@gmail.com', 'qua@gmail.com'];
 var emailTrovata = false;
 for(var i = 0; i < lista.length; i++) {
-  if (email === 'pluto@yahoo.it') {
-    secondData.innerHTML = 'Salve utente, siamo felici di rivederla!';
-  }
-  else if (email !== 'pluto@yahoo.it') {
-    secondData.innerHTML = 'Email errata, accesso negato!';
+  if (email === lista[i]) {
+    emailTrovata = true;
   }
 }
+
+if (emailTrovata === true) {
+  alert('Puoi giocare');
+}
+else {
+  alert('Non puoi giocare');
+}
+
 
 
   // else if (lista[i] !== 'pluto@yahoo.it') {
