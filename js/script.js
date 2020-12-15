@@ -2,9 +2,6 @@ var email = prompt ('Inserisci la tua email');
 console.log('La sua email è: ' + email);
 var data = document.getElementById('advert');
 
-var outputElement = document.getElementById('output');
-outputElement.className = 'denied';
-
 var lista = ['pippo@gmail.com', 'pluto@yahoo.it', 'paperino@tiscali.it', 'minni@gmail.com', 'paperone@gmail.com', 'qui@gmail.com', 'quo@gmail.com', 'qua@gmail.com'];
 var emailTrovata = false;
 for(var i = 0; i < lista.length; i++) {
@@ -28,7 +25,6 @@ if (emailTrovata === true) {
   var dadoLui = Math.floor(Math.random() * (max + 1 - min) + min);
   var dadoPc = document.getElementById('dado-pc');
   dadoPc.innerHTML = 'Pc score: ' + dadoLui;
-  var output = document.getElementById('output');
 
   if (dadoTu > dadoLui) {
     var outputElement = document.getElementById('output');
