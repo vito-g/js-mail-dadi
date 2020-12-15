@@ -15,9 +15,11 @@ for(var i = 0; i < lista.length; i++) {
 
 if (emailTrovata === true) {
   alert('Puoi giocare');
+  secondData.innerHTML = 'Puoi giocare';
 }
 else {
   alert('Non puoi giocare');
+  secondData.innerHTML = 'Non puoi giocare';
 }
 
 
