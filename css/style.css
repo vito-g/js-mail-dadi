@@ -1,15 +1,36 @@
-.denied, .granted, .draw {
-  color: white;
+.container {
+  width: 20%;
+  margin: auto;
+  padding: 40px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
 }
 
-.denied {
+.denied, .granted {
+  color: white;
+  font-family: sans-serif;
+}
+
+.denied, .you-lost  {
   background-color: red;
 }
 
-.granted {
+.granted, .you-won {
   background-color: green;
 }
 
+.you-won, .you-lost, .draw {
+  color: white;
+  border-radius: 5px;
+  width: 40%;
+  margin: 5px auto;
+  box-shadow: 4px 4px 4px grey;
+  padding: 5px;
+  transform: scale(1.2);
+  transition: transform .25s;
+}
+
 .draw {
-  background-color: black;
+  background-color: orange;
 }

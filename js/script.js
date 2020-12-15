@@ -15,6 +15,8 @@ for(var i = 0; i < lista.length; i++) {
 
 if (emailTrovata === true) {
   alert('Granted Access! Enjoy our Game!');
+  var accessElement = document.getElementById('advert');
+  accessElement.className = 'granted';
   data.innerHTML = 'Granted Access! Enjoy our Game!';
   var min = 1;
   var max = 6;
@@ -30,19 +32,21 @@ if (emailTrovata === true) {
 
   if (dadoTu > dadoLui) {
     var outputElement = document.getElementById('output');
-    outputElement.className = 'granted';
+    outputElement.className = 'you-won';
     output.innerHTML = ('Hai Vinto!');
   } else if (dadoTu < dadoLui){
     var outputElement = document.getElementById('output');
-    outputElement.className = 'denied';
+    outputElement.className = 'you-lost';
     output.innerHTML = ('Hai Perso!');
   } else if (dadoTu === dadoLui){
     var outputElement = document.getElementById('output');
     outputElement.className = 'draw';
-    output.innerHTML = ('The game is a draw.. Try Again!');
+    output.innerHTML = ('The game is a draw. Try Again!');
   }
 }
 else {
   alert('Denied Access! No Access No Game!');
+  var accessElement = document.getElementById('advert');
+  accessElement.className = 'denied';
   data.innerHTML = 'Denied Access! No Access No Game!';
 }
