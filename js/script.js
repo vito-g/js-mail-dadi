@@ -33,11 +33,11 @@ if (emailTrovata === true) {
   if (dadoTu > dadoLui) {
     var outputElement = document.getElementById('output');
     outputElement.className = 'you-won';
-    output.innerHTML = ('Hai Vinto!');
+    output.innerHTML = ('You Won!');
   } else if (dadoTu < dadoLui){
     var outputElement = document.getElementById('output');
     outputElement.className = 'you-lost';
-    output.innerHTML = ('Hai Perso!');
+    output.innerHTML = ('You Lost!');
   } else if (dadoTu === dadoLui){
     var outputElement = document.getElementById('output');
     outputElement.className = 'draw';
