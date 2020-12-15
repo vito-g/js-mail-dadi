@@ -14,28 +14,35 @@ for(var i = 0; i < lista.length; i++) {
 }
 
 
-var dadoPc = document.getElementById('dado-pc');
-dadoPc.innerHTML = dado;
 
 if (emailTrovata === true) {
   alert('Puoi giocare');
   secondData.innerHTML = 'Puoi giocare a Dadi';
   var min = 1;
   var max = 6;
-  var dado = Math.floor(Math.random() * (max + 1 - min) + min);
+  var dadoTu = Math.floor(Math.random() * (max + 1 - min) + min);
   var dadoUser = document.getElementById('dado-user');
-  dadoUser.innerHTML = dado;
+  dadoUser.innerHTML = dadoTu;
   var min = 1;
   var max = 6;
-  var dado = Math.floor(Math.random() * (max + 1 - min) + min);
+  var dadoLui = Math.floor(Math.random() * (max + 1 - min) + min);
   var dadoPc = document.getElementById('dado-pc');
-  dadoPc.innerHTML = dado;
+  dadoPc.innerHTML = dadoLui;
 }
 else {
   alert('Non puoi giocare');
   secondData.innerHTML = 'Non puoi giocare';
 }
 
+var output = document.getElementById('output');
+
+if (dadoTu > dadoLui) {
+  output.innerHTML = ('Hai vinto!');
+} else if (dadoTu < dadoLui){
+  output.innerHTML = ('Hai perso!');
+} else {
+  output.innerHTML = ('Partita patta. Riprova!');
+}
 
 
 
