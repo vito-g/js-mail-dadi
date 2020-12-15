@@ -13,14 +13,34 @@ for(var i = 0; i < lista.length; i++) {
   }
 }
 
+
+var dadoPc = document.getElementById('dado-pc');
+dadoPc.innerHTML = dado;
+
 if (emailTrovata === true) {
   alert('Puoi giocare');
-  secondData.innerHTML = 'Puoi giocare';
+  secondData.innerHTML = 'Puoi giocare a Dadi';
+  var min = 1;
+  var max = 6;
+  var dado = Math.floor(Math.random() * (max + 1 - min) + min);
+  var dadoUser = document.getElementById('dado-user');
+  dadoUser.innerHTML = dado;
+  var min = 1;
+  var max = 6;
+  var dado = Math.floor(Math.random() * (max + 1 - min) + min);
+  var dadoPc = document.getElementById('dado-pc');
+  dadoPc.innerHTML = dado;
 }
 else {
   alert('Non puoi giocare');
   secondData.innerHTML = 'Non puoi giocare';
 }
+
+
+
+
+
+
 
 
 
